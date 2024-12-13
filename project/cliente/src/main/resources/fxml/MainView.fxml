@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.alertaclimatico.cliente.controllers.MainController"
+      spacing="10" padding="15">
+
+    <TabPane VBox.vgrow="ALWAYS">
+        <Tab text="Cidades" closable="false">
+            <VBox spacing="10">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Button text="Nova Cidade" onAction="#novaCidade"/>
+                    <Button text="Editar" onAction="#editarCidade"/>
+                    <Button text="Excluir" onAction="#excluirCidade"/>
+                </HBox>
+                
+                <TableView fx:id="tabelaCidades" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colCidadeId" text="ID"/>
+                        <TableColumn fx:id="colCidadeNome" text="Nome"/>
+                        <TableColumn fx:id="colCidadeEstado" text="Estado"/>
+                        <TableColumn fx:id="colCidadePopulacao" text="População"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+        
+        <Tab text="Alertas" closable="false">
+            <VBox spacing="10">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Button text="Novo Alerta" onAction="#novoAlerta"/>
+                    <Button text="Atualizar Status" onAction="#atualizarStatusAlerta"/>
+                    <ComboBox fx:id="filtroStatus" promptText="Filtrar por Status"/>
+                </HBox>
+                
+                <TableView fx:id="tabelaAlertas" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colAlertaId" text="ID"/>
+                        <TableColumn fx:id="colAlertaCidade" text="Cidade"/>
+                        <TableColumn fx:id="colAlertaTipo" text="Tipo"/>
+                        <TableColumn fx:id="colAlertaRisco" text="Nível de Risco"/>
+                        <TableColumn fx:id="colAlertaStatus" text="Status"/>
+                        <TableColumn fx:id="colAlertaData" text="Data"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+        
+        <Tab text="Notificações" closable="false">
+            <VBox spacing="10">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <DatePicker fx:id="dataInicio" promptText="Data Início"/>
+                    <DatePicker fx:id="dataFim" promptText="Data Fim"/>
+                    <Button text="Filtrar" onAction="#filtrarNotificacoes"/>
+                </HBox>
+                
+                <TableView fx:id="tabelaNotificacoes" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colNotificacaoId" text="ID"/>
+                        <TableColumn fx:id="colNotificacaoAlerta" text="Alerta"/>
+                        <TableColumn fx:id="colNotificacaoMensagem" text="Mensagem"/>
+                        <TableColumn fx:id="colNotificacaoData" text="Data Envio"/>
+                        <TableColumn fx:id="colNotificacaoStatus" text="Status"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

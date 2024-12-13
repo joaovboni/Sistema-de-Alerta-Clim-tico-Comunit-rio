@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.alertaclimatico.cliente.controllers.dialogs.AlertaDialogController">
+    <content>
+        <VBox spacing="10" minWidth="400">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <GridPane hgap="10" vgap="10">
+                <Label text="Cidade:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="comboCidade" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Tipo de Evento:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="comboTipoEvento" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Nível de Risco:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="comboNivelRisco" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Data Início:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="dataInicio" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Data Fim:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="dataFim" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Descrição:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextArea fx:id="campoDescricao" GridPane.rowIndex="5" GridPane.columnIndex="1"
+                         prefRowCount="3" wrapText="true"/>
+            </GridPane>
+
+            <Label fx:id="mensagemErro" styleClass="erro-mensagem" visible="false"/>
+        </VBox>
+    </content>
+</DialogPane>

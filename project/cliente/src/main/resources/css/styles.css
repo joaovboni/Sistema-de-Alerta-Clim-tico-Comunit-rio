@@ -1,0 +1,67 @@
+.erro-mensagem {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+}
+
+.titulo-dialog {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.campo-obrigatorio {
+    -fx-border-color: #cccccc;
+}
+
+.campo-obrigatorio:focused {
+    -fx-border-color: #2196F3;
+}
+
+.campo-invalido {
+    -fx-border-color: red;
+}
+
+.botao-primario {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.botao-primario:hover {
+    -fx-background-color: #1976D2;
+}
+
+.botao-perigo {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+.botao-perigo:hover {
+    -fx-background-color: #d32f2f;
+}
+
+.tabela-dados {
+    -fx-background-color: white;
+}
+
+.tabela-dados .column-header {
+    -fx-background-color: #f5f5f5;
+    -fx-font-weight: bold;
+}
+
+.status-ativo {
+    -fx-text-fill: #4CAF50;
+}
+
+.status-inativo {
+    -fx-text-fill: #9E9E9E;
+}
+
+.status-alerta {
+    -fx-text-fill: #f44336;
+}
+
+.card-alerta {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
